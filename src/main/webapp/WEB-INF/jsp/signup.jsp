@@ -2,14 +2,10 @@
 <html>
     <head>
         <title>UCBA Signup</title>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!------ Include the above in your HEAD tag ---------->
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-        <!------ Include the above in your HEAD tag ---------->
+        <script src="webjars/jquery/2.1.3/jquery.min.js"></script>
+        <script src="webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link href="webjars/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
         <%@ page language="java" pageEncoding="utf-8" contentType="text/html;charset=utf-8" %>
     </head>
 
@@ -85,7 +81,7 @@
                         <span class="text-danger">*</span> 姓 (驾照上的拼音) Last Name on Driver's License
                     </label>
                     <div class="col-sm-12">
-                        <input type="text" id="firstName" name="firstName" placeholder="First Name on Driver's License" class="form-control" autofocus>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name on Driver's License" class="form-control" autofocus required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -93,23 +89,23 @@
                         <span class="text-danger">*</span> 名 (驾照上的拼音) Last Name on Driver's License
                     </label>
                     <div class="col-sm-12">
-                        <input type="text" id="lastName" name="firstName" placeholder="Last Name on Driver's License" class="form-control" autofocus>
+                        <input type="text" id="lastName" name="firstName" placeholder="Last Name on Driver's License" class="form-control" autofocus required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="height" class="col-sm-12 control-label text-left">
                         <span class="text-danger">*</span> 身高 Height (cm)
                     </label>
-                    <div class="col-sm-9">
-                        <input id="height" name="height" placeholder="Please write your height in cm" class="form-control">
+                    <div class="col-sm-12">
+                        <input id="height" name="height" placeholder="Please write your height in cm" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="weight" class="col-sm-12 control-label text-left">
                         <span class="text-danger">*</span> 体重 Weight (lbs)
                     </label>
-                    <div class="col-sm-9">
-                        <input id="weight" name="weight" placeholder="Please write your weight in lbs" class="form-control">
+                    <div class="col-sm-12">
+                        <input id="weight" name="weight" placeholder="Please write your weight in lbs" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -117,7 +113,15 @@
                         <span class="text-danger">*</span> 电子邮箱 Email
                     </label>
                     <div class="col-sm-12">
-                        <input type="text" id="email" name="email" placeholder="Email Address" class="form-control" autofocus>
+                        <input type="text" id="email" name="email" placeholder="Email Address" class="form-control" autofocus required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-12 control-label text-left">
+                        <span class="text-danger">*</span> 电话 Phone Number
+                    </label>
+                    <div class="col-sm-12">
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number xxxxxxxxxx" class="form-control" autofocus required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -128,19 +132,14 @@
                         <input type="text" id="wechatId" name="wechatId" placeholder="WeChat ID" class="form-control" autofocus>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="phoneNumber" class="col-sm-12 control-label text-left">
-                        电话 Phone Number
-                    </label>
-                    <div class="col-sm-12">
-                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number xxxxxxxxxx" class="form-control" autofocus>
-                    </div>
-                </div>
 
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-2">
                         <span class="help-block">Your information won't be disclosed anywhere</span>
                     </div>
+                </div>
+                <div class="form-group bg-warning">
+                    Roster must be filled out completely and turn in by 3/29/2019. Team will NOT be allowed deviate from or add to this roster at any point during the season unless the player injuries in the season only then substitution will be allowed for that player.
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Register</button>
             </form> <!-- /form -->
